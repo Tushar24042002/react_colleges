@@ -237,6 +237,7 @@ margin-left: 20px;
         flex-direction: column;
         display: flex;
         padding: 2px 5px;
+        cursor: pointer;
     }
 
     .ranks .rank_badge::before{
@@ -248,4 +249,17 @@ margin-left: 20px;
             border-top: 20px solid rgba(0, 0, 0, 0);
             border-bottom: 20px solid rgba(0, 0, 0, 0);
             border-left: 10px solid rgb(234, 249, 254);
+        }
+        .rank_modal_text{
+            color: rgb(102, 102, 102);
+            font-size: 0.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .modal_table {
+            position: relative;
+        }
+        .modal_table tr td{
+            color: rgb(102, 102, 102);
+            font-size: 0.8rem;
         }

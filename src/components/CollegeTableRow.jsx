@@ -3,7 +3,7 @@ import styles from "./College.module.css";
 import { IoIosArrowDown, IoIosCheckmark, IoMdCheckmark } from 'react-icons/io';
 import { MdCurrencyRupee } from 'react-icons/md';
 import ImageDisplay from './ImageDisplay';
-const CollegeTableRow = ({ data }) => {
+const CollegeTableRow = ({ data, index, modalFunction }) => {
     return (
         <tr>
             <td>
@@ -18,7 +18,7 @@ const CollegeTableRow = ({ data }) => {
                             <h4>{data?.college?.college_name}</h4>
                             <p>{data?.college?.location} | {data?.college?.approved_by}</p>
                         </div>
-                        <div className={styles.cut_off_badge}>
+                        <div className={styles.cut_off_badge} onClick={()=>modalFunction(index, "college")} >
                             <div className={styles.course}>{data?.college?.cut_off[0]?.courses} <IoIosArrowDown />
                             </div>
                             <p className={styles.year}>JEE Main{data?.college?.cut_off[0]?.years[0].year} Cutoff: {data?.college?.cut_off[0]?.years[0].cuttoff}</p>
@@ -29,7 +29,7 @@ const CollegeTableRow = ({ data }) => {
             <td>
                 <div className={styles.fees}>
                     <h6><MdCurrencyRupee />
-                    {data?.course_fees?.amount}</h6>
+                        {data?.course_fees?.amount}</h6>
                     <p>{data?.course_fees?.course}</p>
                     <p>-{data?.course_fees?.year}</p>
                 </div>
@@ -37,12 +37,12 @@ const CollegeTableRow = ({ data }) => {
             <td><div className={styles.placements}>
                 <div className={styles.package}>
                     <h6><MdCurrencyRupee />
-                    {data?.placements?.average_package}</h6>
+                        {data?.placements?.average_package}</h6>
                     <p>Average Package</p>
                 </div>
                 <div className={styles.package}>
                     <h6><MdCurrencyRupee />
-                    {data?.placements?.highest_package}</h6>
+                        {data?.placements?.highest_package}</h6>
                     <p>Highest Package</p>
                 </div>
             </div></td>
@@ -51,7 +51,7 @@ const CollegeTableRow = ({ data }) => {
                     <h6>{`${data?.user_reviews?.rate}/5`}</h6>
                     <p>Based on   {data?.user_reviews?.users} User <br />Reviews</p>
                     {/* <p>-{data?.course_fees?.year}</p> */}
-                    <div className={styles.review_badge}>
+                    <div className={styles.review_badge} onClick={()=>modalFunction(index, "review")}>
                         <span><IoMdCheckmark />
                         </span>
                         <span>{Object.keys(data?.user_reviews?.ratings)[0]}</span>
@@ -63,7 +63,7 @@ const CollegeTableRow = ({ data }) => {
             <td>
                 <div className={styles.ranks}>
                     <h6>#{data?.ranks?.rank}<sup>th</sup>/<span>{data?.ranks?.overall_rank}</span> in India <br /><img src={data?.ranks?.ranks[0]?.image} /> 2024 </h6>
-                    <div className={styles.rank_badge}><ImageDisplay images={data?.ranks?.ranks}/></div>
+                    <div className={styles.rank_badge} onClick={()=>modalFunction(index, "rank")}><ImageDisplay images={data?.ranks?.ranks} /></div>
                 </div>
             </td>
         </tr>
