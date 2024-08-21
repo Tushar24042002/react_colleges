@@ -1,0 +1,36 @@
+/* ImageDisplay.module.css */
+.imageContainer {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-left: 18px;
+    padding-right: 4px;
+  }
+  
+  .imageWrapper {
+    position: relative;
+    margin-left: -15px;
+  }
+  
+  .image {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: contain;
+    border: 2px solid #fff;
+    z-index: 9;
+    background-color: #fff;
+
+  }
+  
+  .moreCount {
+    width: 40px;
+    color: rgb(66, 174, 232);;
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 6px;
+    text-wrap: nowrap;
+    width: auto;
+}

@@ -5,6 +5,7 @@ import InfiniteScroll from 'react-infinite-scroll-component';
 import dummyData from './dummyData';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import styles from "./College.module.css";
+import Modal from './Modal/Modal';
 
 const CollegeTable = () => {
     const [searchQuery, setSearchQuery] = useState('');
@@ -41,6 +42,7 @@ const CollegeTable = () => {
     };
 
     return (
+        <>
         <div className="container-fluid mt-4">
             <div className="row align-items-center mb-3">
                 <div className="col-md-6">
@@ -133,6 +135,10 @@ const CollegeTable = () => {
                 </table>
             </InfiniteScroll>
         </div>
+        {/* <Modal>
+
+        </Modal> */}
+        </>
     );
 };
 

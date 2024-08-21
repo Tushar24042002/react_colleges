@@ -56,6 +56,16 @@ const dummyData = [
                 current_rank: 10,
                 name: "NIRF",
                 image: "https://images.collegedunia.com/public/college_data/images/agencyLogo/nirf1569843987.png?h=20&w=40&mode=stretch"
+            },
+            {
+                current_rank: 10,
+                name: "NIRF",
+                image: "https://images.collegedunia.com/public/college_data/images/agencyLogo/nirf1569843987.png?h=20&w=40&mode=stretch"
+            },
+            {
+                current_rank: 10,
+                name: "NIRF",
+                image: "https://images.collegedunia.com/public/college_data/images/agencyLogo/nirf1569843987.png?h=20&w=40&mode=stretch"
             }]
         }
     },
@@ -116,7 +126,13 @@ const dummyData = [
                 current_rank: 12,
                 name: "NIRF",
                 image: "https://images.collegedunia.com/public/college_data/images/agencyLogo/nirf1569843987.png?h=20&w=40&mode=stretch"
-            }]
+            },
+            {
+                current_rank: 10,
+                name: "NIRF",
+                image: "https://images.collegedunia.com/public/college_data/images/agencyLogo/nirf1569843987.png?h=20&w=40&mode=stretch"
+            }
+        ]
         }
     },
     {
@@ -234,6 +250,10 @@ const dummyData = [
             overall_rank: 50,
             ranks: [{
                 current_rank: 5,
+                name: "NIRF",
+                image: "https://images.collegedunia.com/public/college_data/images/agencyLogo/nirf1569843987.png?h=20&w=40&mode=stretch"
+            }, {
+                current_rank: 10,
                 name: "NIRF",
                 image: "https://images.collegedunia.com/public/college_data/images/agencyLogo/nirf1569843987.png?h=20&w=40&mode=stretch"
             }]

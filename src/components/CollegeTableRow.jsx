@@ -1,7 +1,8 @@
 import React from 'react';
 import styles from "./College.module.css";
-import { IoIosArrowDown } from 'react-icons/io';
+import { IoIosArrowDown, IoIosCheckmark, IoMdCheckmark } from 'react-icons/io';
 import { MdCurrencyRupee } from 'react-icons/md';
+import ImageDisplay from './ImageDisplay';
 const CollegeTableRow = ({ data }) => {
     return (
         <tr>
@@ -50,12 +51,19 @@ const CollegeTableRow = ({ data }) => {
                     <h6>{`${data?.user_reviews?.rate}/5`}</h6>
                     <p>Based on   {data?.user_reviews?.users} User <br />Reviews</p>
                     {/* <p>-{data?.course_fees?.year}</p> */}
+                    <div className={styles.review_badge}>
+                        <span><IoMdCheckmark />
+                        </span>
+                        <span>{Object.keys(data?.user_reviews?.ratings)[0]}</span>
+                        <span><IoIosArrowDown /></span>
+                    </div>
                 </div>
 
             </td>
             <td>
                 <div className={styles.ranks}>
                     <h6>#{data?.ranks?.rank}<sup>th</sup>/<span>{data?.ranks?.overall_rank}</span> in India <br /><img src={data?.ranks?.ranks[0]?.image} /> 2024 </h6>
+                    <div className={styles.rank_badge}><ImageDisplay images={data?.ranks?.ranks}/></div>
                 </div>
             </td>
         </tr>
